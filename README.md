@@ -135,8 +135,8 @@ This project is licensed under the MIT License.
 
 Have any questions or suggestions? Feel free to reach out!
 
-- Email: your.email@example.com
-- Twitter: @your-twitter
+- Email: diegomejiasobsu@gmail.com
+- LinkedIn: https://www.linkedin.com/in/diego-andres-ramirez-mejia-1584a5323/
 
 ---
 
