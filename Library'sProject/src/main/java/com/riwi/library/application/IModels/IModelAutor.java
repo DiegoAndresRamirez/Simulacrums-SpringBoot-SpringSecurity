@@ -1,5 +1,8 @@
 package com.riwi.library.application.IModels;
 
+import com.riwi.library.infrastructure.dto.request.AutorCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.response.AutorCreateResponseDTO;
+
 public interface IModelAutor {
-    String create(String name, String surname, String age, String description);
+    AutorCreateResponseDTO create(AutorCreateRequestDTO autorCreateRequestDTO);
 }
