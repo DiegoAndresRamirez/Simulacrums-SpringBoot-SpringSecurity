@@ -1,6 +1,9 @@
 package com.riwi.library.application.IModels;
 
+import com.riwi.library.infrastructure.dto.request.userRequestDtos.UserCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.response.userResponseDtos.UserCreateResponseDTO;
+
 public interface IModelUser {
 
-    String create(String name, String surname, String email, String password, String role);
+    UserCreateResponseDTO create(UserCreateRequestDTO userCreateRequestDTO);
 }

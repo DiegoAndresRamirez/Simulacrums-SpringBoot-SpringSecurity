@@ -1,6 +1,6 @@
 package com.riwi.library.infrastructure.IModels;
 
-import com.riwi.library.infrastructure.dto.request.autorRequestDtos.AutorCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.request.AutorCreateRequestDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 

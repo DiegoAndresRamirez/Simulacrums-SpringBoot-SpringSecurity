@@ -1,6 +1,9 @@
 package com.riwi.library.application.IModels;
 
+import com.riwi.library.infrastructure.dto.request.categoryRequestDtos.CategoryCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.response.categoryResponseDtos.CategoryCreateResponseDTO;
+
 public interface IModelCategory {
 
-    String create(String name, String description);
+    CategoryCreateResponseDTO create(CategoryCreateRequestDTO categoryCreateRequestDTO);
 }
