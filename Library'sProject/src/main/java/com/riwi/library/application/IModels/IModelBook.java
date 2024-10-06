@@ -1,5 +1,8 @@
 package com.riwi.library.application.IModels;
 
+import com.riwi.library.infrastructure.dto.request.bookRequestDtos.BookCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.response.bookResponseDtos.BookCreateResponseDTO;
+
 public interface IModelBook {
-    String create(String title, String author, String year, String description);
+    BookCreateResponseDTO create(BookCreateRequestDTO bookCreateRequestDTO);
 }

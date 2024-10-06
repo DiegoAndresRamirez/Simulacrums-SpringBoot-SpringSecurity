@@ -1,6 +1,0 @@
-package com.riwi.library.infrastructure.IModels;
-
-public interface IBookModel {
-
-    ResponseEntity<?> create(String title, String author, String year, String description);
-}

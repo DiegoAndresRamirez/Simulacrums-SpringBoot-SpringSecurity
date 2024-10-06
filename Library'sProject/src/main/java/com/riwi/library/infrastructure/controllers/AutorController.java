@@ -2,7 +2,7 @@ package com.riwi.library.infrastructure.controllers;
 
 import com.riwi.library.application.services.AutorService;
 import com.riwi.library.infrastructure.IModels.IAutorModel;
-import com.riwi.library.infrastructure.dto.request.AutorCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.request.autorRequestDtos.AutorCreateRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

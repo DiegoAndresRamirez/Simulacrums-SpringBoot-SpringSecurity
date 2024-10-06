@@ -3,8 +3,8 @@ package com.riwi.library.application.services;
 import com.riwi.library.application.IModels.IModelAutor;
 import com.riwi.library.domain.models.Autor;
 import com.riwi.library.domain.persistence.AutorRepository;
-import com.riwi.library.infrastructure.dto.request.autorRequestDtos.AutorCreateRequestDTO;
-import com.riwi.library.infrastructure.dto.response.autorResponseDtos.AutorCreateResponseDTO;
+import com.riwi.library.infrastructure.dto.request.AutorCreateRequestDTO;
+import com.riwi.library.infrastructure.dto.response.AutorCreateResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

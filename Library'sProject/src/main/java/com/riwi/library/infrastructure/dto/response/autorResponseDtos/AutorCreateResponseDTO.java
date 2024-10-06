@@ -1,4 +1,5 @@
-package com.riwi.library.infrastructure.dto.request;
+package com.riwi.library.infrastructure.dto.response.autorResponseDtos;
+
 
 import lombok.*;
 
@@ -7,9 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AutorCreateRequestDTO {
+public class AutorCreateResponseDTO {
+
     private String name;
-    private String surname;
-    private String age;
     private String description;
 }
