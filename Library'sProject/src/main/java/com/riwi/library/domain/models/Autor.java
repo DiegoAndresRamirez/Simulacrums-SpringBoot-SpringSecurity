@@ -1,10 +1,10 @@
 package com.riwi.library.domain.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.riwi.library.domain.intermediate.AutorBook;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,4 +24,7 @@ public class Autor {
     private String age;
 
     private String description;
+
+    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
+    private Set<AutorBook> books;
 }
