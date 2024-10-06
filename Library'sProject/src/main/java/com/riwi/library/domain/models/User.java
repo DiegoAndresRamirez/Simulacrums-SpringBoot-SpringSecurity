@@ -1,6 +1,7 @@
 package com.riwi.library.domain.models;
 
 
+import com.riwi.library.utils.enums.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,4 +27,7 @@ public class User {
     private String email;
 
     private String password;
+
+    private Role role;
+
 }
