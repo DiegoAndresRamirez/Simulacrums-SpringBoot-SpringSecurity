@@ -58,6 +58,9 @@ public class UserService implements IUserService {
                     .role(user.getRole())
                     .build());
         });
+        if(users.isEmpty()) {
+            throw new UsernameNotFoundException("User not found");
+        }
         return users;
     }
 
