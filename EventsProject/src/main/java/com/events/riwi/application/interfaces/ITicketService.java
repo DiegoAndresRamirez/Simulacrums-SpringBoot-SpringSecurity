@@ -9,13 +9,13 @@ import java.util.List;
 
 public interface ITicketService {
 
-    TicketCreateResponseDTO createUser(TicketCreateRequestDTO ticketCreateRequestDTO);
+    TicketCreateResponseDTO createTicket(TicketCreateRequestDTO ticketCreateRequestDTO);
 
-    List<TicketCreateRequestDTO> getAllUsers();
+    List<TicketCreateRequestDTO> getAllTickets();
 
-    TicketCreateRequestDTO getUserById(Long id);
+    TicketCreateRequestDTO getTicketById(Long id);
 
-    String deleteUser(Long id);
+    String deleteTicket(Long id);
 
-    String updateUser(Long id, TicketCreateRequestDTO ticketCreateRequestDTO);
+    String updateTicket(Long id, TicketCreateRequestDTO ticketCreateRequestDTO);
 }

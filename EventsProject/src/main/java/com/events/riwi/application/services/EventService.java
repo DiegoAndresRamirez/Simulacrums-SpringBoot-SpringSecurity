@@ -19,7 +19,7 @@ public class EventService implements IEventService {
     private EventRepository eventRepository;
 
     @Override
-    public EventCreateResponseDTO createUser(EventCreateRequestDTO eventCreateRequestDTO) {
+    public EventCreateResponseDTO createEvent(EventCreateRequestDTO eventCreateRequestDTO) {
         Event event = eventRepository.findByName(eventCreateRequestDTO.getName());
         if (event != null) {
             return EventCreateResponseDTO.builder()
@@ -42,7 +42,7 @@ public class EventService implements IEventService {
     }
 
     @Override
-    public List<EventCreateRequestDTO> getAllUsers() {
+    public List<EventCreateRequestDTO> getAllEvents() {
         List<EventCreateRequestDTO> events = new ArrayList<>();
         eventRepository.findAll().forEach(event -> {
             events.add(EventCreateRequestDTO.builder()
@@ -61,7 +61,7 @@ public class EventService implements IEventService {
     }
 
     @Override
-    public EventCreateRequestDTO getUserById(Long id) {
+    public EventCreateRequestDTO getEventById(Long id) {
         Event event = eventRepository.findById(id).orElse(null);
         if (event == null) {
             throw new UsernameNotFoundException("Event not found");
@@ -78,7 +78,7 @@ public class EventService implements IEventService {
     }
 
     @Override
-    public String deleteUser(Long id) {
+    public String deleteEvent(Long id) {
         Event event = eventRepository.findById(id).orElse(null);
         if (event == null) {
             throw new UsernameNotFoundException("Event not found");
@@ -88,7 +88,7 @@ public class EventService implements IEventService {
     }
 
     @Override
-    public String updateUser(Long id, EventCreateRequestDTO eventCreateRequestDTO) {
+    public String updateEvent(Long id, EventCreateRequestDTO eventCreateRequestDTO) {
         Event event = eventRepository.findById(id).orElse(null);
         if (event == null) {
             throw new UsernameNotFoundException("Event not found");

@@ -9,13 +9,13 @@ import com.events.riwi.infrastructure.dto.userDtos.UserGetResponseDTO;
 import java.util.List;
 
 public interface IEventService {
-    EventCreateResponseDTO createUser(EventCreateRequestDTO eventCreateRequestDTO);
+    EventCreateResponseDTO createEvent(EventCreateRequestDTO eventCreateRequestDTO);
 
-    List<EventCreateRequestDTO> getAllUsers();
+    List<EventCreateRequestDTO> getAllEvents();
 
-    EventCreateRequestDTO getUserById(Long id);
+    EventCreateRequestDTO getEventById(Long id);
 
-    String deleteUser(Long id);
+    String deleteEvent(Long id);
 
-    String updateUser(Long id, EventCreateRequestDTO eventCreateRequestDTO);
+    String updateEvent(Long id, EventCreateRequestDTO eventCreateRequestDTO);
 }

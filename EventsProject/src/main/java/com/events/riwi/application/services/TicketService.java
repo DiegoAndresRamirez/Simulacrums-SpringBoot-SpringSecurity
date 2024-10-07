@@ -20,7 +20,7 @@ public class TicketService implements ITicketService {
     private TicketRepository ticketRepository;
 
     @Override
-    public TicketCreateResponseDTO createUser(TicketCreateRequestDTO ticketCreateRequestDTO) {
+    public TicketCreateResponseDTO createTicket(TicketCreateRequestDTO ticketCreateRequestDTO) {
         Ticket ticket = ticketRepository.findByCode(ticketCreateRequestDTO.getCode());
         if (ticket != null) {
             throw new EntityExistsException("Ticket already exists");
@@ -36,7 +36,7 @@ public class TicketService implements ITicketService {
     }
 
     @Override
-    public List<TicketCreateRequestDTO> getAllUsers() {
+    public List<TicketCreateRequestDTO> getAllTickets() {
         List<TicketCreateRequestDTO> tickets = new ArrayList<>();
 
         ticketRepository.findAll().forEach(ticket -> {
@@ -54,7 +54,7 @@ public class TicketService implements ITicketService {
     }
 
     @Override
-    public TicketCreateRequestDTO getUserById(Long id) {
+    public TicketCreateRequestDTO getTicketById(Long id) {
         Ticket ticket = ticketRepository.findById(id).orElse(null);
         if (ticket == null) {
             throw new UsernameNotFoundException("Ticket not found");
@@ -68,7 +68,7 @@ public class TicketService implements ITicketService {
     }
 
     @Override
-    public String deleteUser(Long id) {
+    public String deleteTicket(Long id) {
         Ticket ticket = ticketRepository.findById(id).orElse(null);
         if (ticket == null) {
             throw new UsernameNotFoundException("Ticket not found");
@@ -78,7 +78,7 @@ public class TicketService implements ITicketService {
     }
 
     @Override
-    public String updateUser(Long id, TicketCreateRequestDTO ticketCreateRequestDTO) {
+    public String updateTicket(Long id, TicketCreateRequestDTO ticketCreateRequestDTO) {
         Ticket ticket = ticketRepository.findById(id).orElse(null);
         if (ticket == null) {
             throw new UsernameNotFoundException("Ticket not found");
