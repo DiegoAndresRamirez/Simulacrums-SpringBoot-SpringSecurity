@@ -23,7 +23,7 @@ public class SecurityConfig {
     JWTFilter jwtFilter;
 
     String[] PUBLIC_URLS = {"api/v1/auth/login", "api/v1/auth/register", "/swagger-ui/**", "v3/api-docs/**", "/v3/api-docs.yaml",
-            "/swagger-ui.html"};
+            "/swagger-ui.html", "api/v1/users/**"};
 
     @Bean // Declaramos un bean para la cadena de filtros de seguridad
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -41,6 +41,4 @@ public class SecurityConfig {
 
         return http.build(); // Construimos y retornamos la cadena de filtros de seguridad
     }
-
-
 }

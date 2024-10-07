@@ -7,6 +7,7 @@ import com.events.riwi.infrastructure.dto.userDtos.UserGetResponseDTO;
 import com.events.riwi.infrastructure.interfaces.IUserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
