@@ -32,7 +32,4 @@ public class RegisterRequestDTO {
     @Size(min = 8)
     private String password;
 
-    @NotBlank
-    @Enumerated(EnumType.STRING)
-    private Role role;
 }

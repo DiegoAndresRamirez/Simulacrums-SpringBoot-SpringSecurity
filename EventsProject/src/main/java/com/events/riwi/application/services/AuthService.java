@@ -70,6 +70,7 @@ public class AuthService implements IAuthService {
 
         return RegisterResponseDTO.builder()
                 .message("User registered successfully")
+                .role(role)
                 .build();
     }
 }
