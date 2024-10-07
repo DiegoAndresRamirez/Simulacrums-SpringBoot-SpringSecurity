@@ -24,11 +24,11 @@ public class Ticket {
     private Boolean expired;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false) // Relación con User
+    @JoinColumn(name = "user_id", nullable = true) // Relación con User
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "event_id", nullable = false) // Relación con Event
+    @JoinColumn(name = "event_id", nullable = true) // Relación con Event
     private Event event;
 
 //    @CreatedBy

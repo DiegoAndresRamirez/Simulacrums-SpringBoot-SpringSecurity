@@ -21,7 +21,7 @@ public class EventController implements IEventController {
     @PostMapping("/create")
     public ResponseEntity<EventCreateResponseDTO> createEvent(@RequestBody EventCreateRequestDTO eventCreateRequestDTO) {
         try{
-            return ResponseEntity.status(201).body(eventService.createUser(eventCreateRequestDTO));
+            return ResponseEntity.status(201).body(eventService.createEvent(eventCreateRequestDTO));
         }catch (Exception e){
             return ResponseEntity.status(400).body(null);
         }
@@ -31,7 +31,7 @@ public class EventController implements IEventController {
     @GetMapping("/all")
     public ResponseEntity<List<EventCreateRequestDTO>> getAllEvents() {
         try{
-            return ResponseEntity.status(200).body(eventService.getAllUsers());
+            return ResponseEntity.status(200).body(eventService.getAllEvents());
         }catch (Exception e){
             return ResponseEntity.status(400).body(null);
         }
@@ -41,7 +41,7 @@ public class EventController implements IEventController {
     @GetMapping("/{id}")
     public ResponseEntity<EventCreateRequestDTO> getEventById(@RequestParam Long id) {
         try{
-            return ResponseEntity.status(200).body(eventService.getUserById(id));
+            return ResponseEntity.status(200).body(eventService.getEventById(id));
         }catch (Exception e){
             return ResponseEntity.status(400).body(null);
         }
@@ -51,7 +51,7 @@ public class EventController implements IEventController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@RequestParam Long id) {
         try{
-            return ResponseEntity.status(200).body(eventService.deleteUser(id));
+            return ResponseEntity.status(200).body(eventService.deleteEvent(id));
         }catch (Exception e){
             return ResponseEntity.status(400).body(null);
         }
@@ -61,7 +61,7 @@ public class EventController implements IEventController {
     @PutMapping("/{id}")
     public ResponseEntity<String> updateUser(@RequestParam Long id, @RequestBody EventCreateRequestDTO eventCreateRequestDTO) {
         try{
-            return ResponseEntity.status(200).body(eventService.updateUser(id, eventCreateRequestDTO));
+            return ResponseEntity.status(200).body(eventService.updateEvent(id, eventCreateRequestDTO));
         }catch (Exception e){
             return ResponseEntity.status(400).body(null);
         }
