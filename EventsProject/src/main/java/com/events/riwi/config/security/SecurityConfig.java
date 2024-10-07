@@ -22,7 +22,7 @@ public class SecurityConfig {
     @Autowired
     JWTFilter jwtFilter;
 
-    String[] PUBLIC_URLS = {"/login", "/register", "/swagger-ui/**", "v3/api-docs/**", "/v3/api-docs.yaml",
+    String[] PUBLIC_URLS = {"api/v1/auth/login", "api/v1/auth/register", "/swagger-ui/**", "v3/api-docs/**", "/v3/api-docs.yaml",
             "/swagger-ui.html"};
 
     @Bean // Declaramos un bean para la cadena de filtros de seguridad
