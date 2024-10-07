@@ -20,6 +20,6 @@ public interface ITicketController {
 
     ResponseEntity<String> deleteTicket(@RequestParam Long id);
 
-    ResponseEntity<String> updateTicket(@RequestParam Long id, @RequestBody TicketCreateRequestDTO ticketCreateRequestDTO);
+    ResponseEntity<String> updateUser(@RequestParam Long id, @RequestBody TicketCreateRequestDTO ticketCreateRequestDTO);
 
 }
